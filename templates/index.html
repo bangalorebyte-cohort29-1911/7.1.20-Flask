@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    {% if isAdmin %}
+    {% for todo in todos %}
+    <div>
+        <ul>
+            <li>{{ todo.id }}- <strong>{{ todo.text }}</strong> - {{ todo.isComplete }} </li>
+        </ul>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div>
+        You are not authorized to view this
+    </div>
+    {% endif %}
+    
+{% endblock body %}

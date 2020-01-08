@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <div>This is contact us page</div>
+    <form action="/contact" method="post">
+        <input type="text" name="name" placeholder="Enter your name :">
+        <input type="submit" value="Submit">    
+    </form>
+{% endblock body%}
